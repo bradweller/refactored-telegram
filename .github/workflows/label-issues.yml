@@ -8,10 +8,10 @@ jobs:
   label_issues:
     runs-on: ubuntu-latest
     permissions:
-      issues:
+      issues: write
     steps:
       - name: Label issues
         uses: andymckay/labeler@1.0.4
         with:
           add-labels: "triage"
-          repo-token ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
